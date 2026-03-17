@@ -9,7 +9,7 @@ Web app for practicing ASL letters A–Z. You sign in front of the camera; a CNN
 - **`lib/`** — Helpers (e.g. user progress, XP).
 - **`python-api/`** — Backend and model:
   - **`app.py`** — Flask server. Loads `model.pt`, runs the CNN on the cropped hand image, returns letter + top 3 with confidence.
-  - **`model.py`** — CNN definition (3 conv layers, 2 FC, dropout, 26 classes, 128×128 input).
+  - **`model.py`** — CNN definition (3 conv layers 32→64→128, 2 FC with dropout, 26 classes, 180×180 input).
   - **`train.py`** — Trains on SignSense data (80/10/10 train/val/test split), saves `model.pt`.
   - **`model.pt`** — Trained weights (you get this by running `train.py`; SignSense data goes in `python-api/SignSense/asl_alphabet_train/` with one folder per letter).  
     **Note:** the SignSense dataset itself is **not** included in this repo because it is too large.
