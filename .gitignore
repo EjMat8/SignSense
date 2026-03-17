@@ -1,0 +1,15 @@
+
+
+# Common ignores
+node_modules/
+.next/
+.env*.local
+.DS_Store
+
+
+.venv/
+python-api/.venv/
+report/.venv/
+
+python-api/SignSense/
+report/SignSense/
